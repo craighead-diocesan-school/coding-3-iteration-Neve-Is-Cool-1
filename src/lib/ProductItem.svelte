@@ -6,3 +6,9 @@
 
 <li>{name}= ${price}</li>
 <p>{description}</p>
+
+<style>
+  p {
+    font-size: 0.8em;
+  }
+</style>

@@ -1,4 +1,5 @@
 <script>
+  let students = ["Alice", "Barbie", "Charlie"]
   import ProductItem from "./ProductItem.svelte"
   const products = [
     { name: "Apple", price: 1.0, description: "A juicy red apple" },
@@ -9,8 +10,17 @@
   ]
 </script>
 
-<ul>
-  {#each products as product}
-    <ProductItem name={product.name} price={product.price} description={product.description} />
-  {/each}
-</ul>
+<div class="box">
+  <ul>
+    {#each students as student, index}
+      <li>{index + 1}. {student}</li>
+    {/each}
+  </ul>
+</div>
+<div class="box">
+  <ul>
+    {#each products as product}
+      <ProductItem name={product.name} price={product.price} description={product.description} />
+    {/each}
+  </ul>
+</div>
